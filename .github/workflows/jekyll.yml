@@ -29,7 +29,7 @@ jobs:
         POLLY_USER_PASSWORD: ${{ secrets.UserPassword }}
       run: |
         sudo npm install -g @elucidatainc/pollycli
-        sudo mv ./patch/logs.js /usr/local/lib/node_modules/@elucidatainc/pollycli/src/logs.json
+        sudo cp ./patch/logs.js /usr/local/lib/node_modules/@elucidatainc/pollycli/src/logs.json
         sudo apt-get install expect
         echo '#!/usr/bin/expect -f' > login.sh
         echo 'set timeout -1' >> login.sh
@@ -48,7 +48,8 @@ jobs:
         git config --global user.email ${{ github.event.inputs.username }}
         git config --global user.name ${{ github.event.inputs.username }}
         git add -A
-        DATE_NOW_POLLY=`date +%d-%m-%Y
+        pwd
+        ls
         git commit -m "compute usage commit"
         git fetch origin master
         git push origin HEAD:master
