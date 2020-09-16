@@ -29,6 +29,7 @@ jobs:
         POLLY_USER_PASSWORD: ${{ secrets.UserPassword }}
       run: |
         sudo npm install -g @elucidatainc/pollycli
+        ls /usr/local/lib/node_modules/@elucidatainc/pollycli/src/
         sudo cp ./patch/logs.js /usr/local/lib/node_modules/@elucidatainc/pollycli/src/logs.json
         sudo apt-get install expect
         echo '#!/usr/bin/expect -f' > login.sh
