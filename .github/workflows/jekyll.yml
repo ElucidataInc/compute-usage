@@ -6,7 +6,7 @@ name: Checking compute usage
 # or API.
 on:
   schedule:
-    - cron:  "*/5 * * * *"
+    - cron:  "*/60 * * * *"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -44,8 +44,6 @@ jobs:
         rm ./login.sh
         sudo chmod +x ./run_all.sh
         ./run_all.sh
-        pwd
-        ls
         git status
         echo -e "a\n*\nq\n"|git add -i
         git status
