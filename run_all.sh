@@ -24,7 +24,6 @@ do
     # excuting the command to check the status
     $STATUS > status.txt
     # showing the status
-    cat status.txt
     # checking if the status is success or error
     POLLY_SUCC=$(cat status.txt | grep "SUCCESS" || true)
     POLLY_ERR=$(cat status.txt | grep "ERROR" || true)
