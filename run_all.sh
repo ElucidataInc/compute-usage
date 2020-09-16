@@ -53,6 +53,7 @@ do
         sleep 10
         FILE_NAME=$(date +%s%N | cut -b1-13)
         POLLY_LOGS_FINAL=$($POLLY_LOGS > ./output/${FILE_NAME}.json)
+        cat ./output/${FILE_NAME}.json
         echo -e "$(cat ./template1)\n var completeData = $(cat ./output/${FILE_NAME}.json)\n$(cat ./template2)" > ./output/$FILE_NAME.html
         echo "SUCCESS"
         rm ./startme.txt
