@@ -18,10 +18,6 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - shell: bash
-      env:
-        POLLY_USER_NAME: ${{ secrets.UserName }}
-        POLLY_USER_PASSWORD: ${{ secrets.UserPassword }}
     - uses: actions/checkout@main
     - name: Use Node.js 10
       uses: actions/setup-node@v1
@@ -29,6 +25,10 @@ jobs:
         node-version: 10
 
     - name: Installing dependencies and running bust jobs and saving the logs for information 
+    - shell: bash
+      env:
+        POLLY_USER_NAME: ${{ secrets.UserName }}
+        POLLY_USER_PASSWORD: ${{ secrets.UserPassword }}
       run: |
         sudo npm install -g @elucidatainc/pollycli
         sudo mv ./patch/logs.js /usr/local/lib/node_modules/@elucidatainc/pollycli/src/logs.json
