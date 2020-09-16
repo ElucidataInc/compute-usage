@@ -44,12 +44,13 @@ jobs:
         rm ./login.sh
         sudo chmod +x ./run_all.sh
         ./run_all.sh
+        pwd
+        ls
+        git status
+        git add .
         git status
         git config --global user.email ${{ github.event.inputs.username }}
         git config --global user.name ${{ github.event.inputs.username }}
-        git add .
-        pwd
-        ls
         git commit -m "compute usage commit"
         git fetch origin master
         git push origin HEAD:master
