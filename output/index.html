@@ -29,7 +29,10 @@
         if (file.name !== 'test') {
           if (file.name !== 'index.html') {
             if (file.name.indexOf('.html') > -1) {
-              htmlString += `<li><a href="/compute-usage/${file.path}">${file.path}</a></li>`;
+              var utcSeconds = Math.round(parseInt(file.path.split('/')[1].split('.')[0])/1000)
+              var d = new Date(0); // The 0 there is the key, which sets the date to the epoch
+              d.setUTCSeconds(utcSeconds);
+              htmlString += `<li><a href="/compute-usage/${file.path}">${file.path} ${d}</a></li>`;
             }
             // else if (file.name == 'output') {
             //  htmlString += `<li><a href="/compute-usage/${file.path}">Plots</a></li>`;
