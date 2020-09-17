@@ -28,9 +28,10 @@
       for (let file of data) {
         if (file.name !== 'test') {
           if (file.name !== 'index.html') {
-            //if (file.name == 'input') {
-              htmlString += `<li><a href="/compute-usage/${file.path}">file.path</a></li>`;
-            //} else if (file.name == 'output') {
+            if (file.name.indexOf('.html') > -1) {
+              htmlString += `<li><a href="/compute-usage/${file.path}">${file.path}</a></li>`;
+            }
+            // else if (file.name == 'output') {
             //  htmlString += `<li><a href="/compute-usage/${file.path}">Plots</a></li>`;
             //}
           }
