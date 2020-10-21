@@ -1,0 +1,2035 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <title>Compute instance data</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="accordion" id="accordionExample"></div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script id="data-input">
+ var completeData = {
+  "aks-sharedunp-20666395-vmss000013": {
+    "cpu": {
+      "raw": {
+        "Requests": "59385m",
+        "Limits": "59750m"
+      },
+      "percent": {
+        "Requests": "(93%)",
+        "Limits": "(94%)"
+      }
+    },
+    "memory": {
+      "raw": {
+        "Requests": "117914187520",
+        "Limits": "119415577600"
+      },
+      "percent": {
+        "Requests": "(45%)",
+        "Limits": "(46%)"
+      }
+    },
+    "pods": {
+      "6239-108c200f5ecc4f64a075c7670cad4d0f-rdrvt": {
+        "cpu": {
+          "raw": {
+            "Requests": "14",
+            "Limits": "14"
+          },
+          "percent": {
+            "Requests": "(22%)",
+            "Limits": "(22%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "28G",
+            "Limits": "28G"
+          },
+          "percent": {
+            "Requests": "(10%)",
+            "Limits": "(10%)"
+          }
+        }
+      },
+      "6239-6243685c50924a859dcf080b188e4a72-rrdbw": {
+        "cpu": {
+          "raw": {
+            "Requests": "14",
+            "Limits": "14"
+          },
+          "percent": {
+            "Requests": "(22%)",
+            "Limits": "(22%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "28G",
+            "Limits": "28G"
+          },
+          "percent": {
+            "Requests": "(10%)",
+            "Limits": "(10%)"
+          }
+        },
+        "time": "2m42s"
+      },
+      "6239-662fcbae58764f0aaf0766b8c7953f78-lh9s2": {
+        "cpu": {
+          "raw": {
+            "Requests": "14",
+            "Limits": "14"
+          },
+          "percent": {
+            "Requests": "(22%)",
+            "Limits": "(22%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "28G",
+            "Limits": "28G"
+          },
+          "percent": {
+            "Requests": "(10%)",
+            "Limits": "(10%)"
+          }
+        },
+        "time": "45s"
+      },
+      "6239-6d96520784db484cbaa033e70d8ca0f0-bvvq4": {
+        "cpu": {
+          "raw": {
+            "Requests": "14",
+            "Limits": "14"
+          },
+          "percent": {
+            "Requests": "(22%)",
+            "Limits": "(22%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "28G",
+            "Limits": "28G"
+          },
+          "percent": {
+            "Requests": "(10%)",
+            "Limits": "(10%)"
+          }
+        },
+        "time": "52s"
+      },
+      "continuous-image-puller-twfh9": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "15d"
+      },
+      "jupyter-1603257939491960-2d0ccd1c816f77418c88a6612dbca8b3fe-2ddb2c2002-2d135d-2d11eb-2d9931-2dee1cff9124db": {
+        "cpu": {
+          "raw": {
+            "Requests": "2",
+            "Limits": "2"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "4G",
+            "Limits": "4G"
+          },
+          "percent": {
+            "Requests": "(1%)",
+            "Limits": "(1%)"
+          }
+        },
+        "time": "12h"
+      },
+      "up-pod-1cpu2gbram3-6-2r-4120cb21-947d-4e1c-b3fb-d571d7022fc0": {
+        "cpu": {
+          "raw": {
+            "Requests": "1",
+            "Limits": "1"
+          },
+          "percent": {
+            "Requests": "(1%)",
+            "Limits": "(1%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "1500M",
+            "Limits": "2G"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "17h"
+      }
+    }
+  },
+  "aks-sharedunp-20666395-vmss00001w": {
+    "cpu": {
+      "raw": {
+        "Requests": "52385m",
+        "Limits": "52750m"
+      },
+      "percent": {
+        "Requests": "(82%)",
+        "Limits": "(83%)"
+      }
+    },
+    "memory": {
+      "raw": {
+        "Requests": "103414187520",
+        "Limits": "105415577600"
+      },
+      "percent": {
+        "Requests": "(40%)",
+        "Limits": "(41%)"
+      }
+    },
+    "pods": {
+      "6239-900c06ace09e4203a6ed85bd7409f987-9cd2d": {
+        "cpu": {
+          "raw": {
+            "Requests": "14",
+            "Limits": "14"
+          },
+          "percent": {
+            "Requests": "(22%)",
+            "Limits": "(22%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "28G",
+            "Limits": "28G"
+          },
+          "percent": {
+            "Requests": "(10%)",
+            "Limits": "(10%)"
+          }
+        },
+        "time": "62s"
+      },
+      "continuous-image-puller-jpk9j": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "13h"
+      },
+      "jupyter-1603301406095080-2d5cccf7eed7c84194a4a5f83fbb98d8ef-2d0f4968bc-2d13c3-2d11eb-2d9931-2dee1cff9124db": {
+        "cpu": {
+          "raw": {
+            "Requests": "36",
+            "Limits": "36"
+          },
+          "percent": {
+            "Requests": "(56%)",
+            "Limits": "(56%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "72G",
+            "Limits": "72G"
+          },
+          "percent": {
+            "Requests": "(28%)",
+            "Limits": "(28%)"
+          }
+        },
+        "time": "51m"
+      },
+      "up-pod-2cpu4gbram3-6-1r-55e1b057-6d8e-4bf5-b1e6-ccdf3beac4c2": {
+        "cpu": {
+          "raw": {
+            "Requests": "2",
+            "Limits": "2"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "3G",
+            "Limits": "4G"
+          },
+          "percent": {
+            "Requests": "(1%)",
+            "Limits": "(1%)"
+          }
+        },
+        "time": "114s"
+      }
+    }
+  },
+  "aks-sharedunp-20666395-vmss00001y": {
+    "cpu": {
+      "raw": {
+        "Requests": "56385m",
+        "Limits": "56750m"
+      },
+      "percent": {
+        "Requests": "(89%)",
+        "Limits": "(89%)"
+      }
+    },
+    "memory": {
+      "raw": {
+        "Requests": "112414187520",
+        "Limits": "113415577600"
+      },
+      "percent": {
+        "Requests": "(43%)",
+        "Limits": "(44%)"
+      }
+    },
+    "pods": {
+      "6239-08ca3a33dd864a10a123e9a835fccecb-x659f": {
+        "cpu": {
+          "raw": {
+            "Requests": "14",
+            "Limits": "14"
+          },
+          "percent": {
+            "Requests": "(22%)",
+            "Limits": "(22%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "28G",
+            "Limits": "28G"
+          },
+          "percent": {
+            "Requests": "(10%)",
+            "Limits": "(10%)"
+          }
+        },
+        "time": "38s"
+      },
+      "6239-737cded7b76b4bd5a55fa76534bf90f8-2vc5t": {
+        "cpu": {
+          "raw": {
+            "Requests": "14",
+            "Limits": "14"
+          },
+          "percent": {
+            "Requests": "(22%)",
+            "Limits": "(22%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "28G",
+            "Limits": "28G"
+          },
+          "percent": {
+            "Requests": "(10%)",
+            "Limits": "(10%)"
+          }
+        },
+        "time": "101s"
+      },
+      "6239-ecde2580c3484f6294c064640f780ee2-brlhz": {
+        "cpu": {
+          "raw": {
+            "Requests": "14",
+            "Limits": "14"
+          },
+          "percent": {
+            "Requests": "(22%)",
+            "Limits": "(22%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "28G",
+            "Limits": "28G"
+          },
+          "percent": {
+            "Requests": "(10%)",
+            "Limits": "(10%)"
+          }
+        },
+        "time": "111s"
+      },
+      "6239-eefc0a424d2647d888bf93622c7b8b49-dtr5x": {
+        "cpu": {
+          "raw": {
+            "Requests": "14",
+            "Limits": "14"
+          },
+          "percent": {
+            "Requests": "(22%)",
+            "Limits": "(22%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "28G",
+            "Limits": "28G"
+          },
+          "percent": {
+            "Requests": "(10%)",
+            "Limits": "(10%)"
+          }
+        },
+        "time": "72s"
+      },
+      "continuous-image-puller-wfk2b": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "14m"
+      }
+    }
+  },
+  "aks-sharedunp-20666395-vmss00001z": {
+    "cpu": {
+      "raw": {
+        "Requests": "56385m",
+        "Limits": "56750m"
+      },
+      "percent": {
+        "Requests": "(89%)",
+        "Limits": "(89%)"
+      }
+    },
+    "memory": {
+      "raw": {
+        "Requests": "112414187520",
+        "Limits": "113415577600"
+      },
+      "percent": {
+        "Requests": "(43%)",
+        "Limits": "(44%)"
+      }
+    },
+    "pods": {
+      "6239-025aa1196f4543509bd6a0988e22bb75-w5cw5": {
+        "cpu": {
+          "raw": {
+            "Requests": "14",
+            "Limits": "14"
+          },
+          "percent": {
+            "Requests": "(22%)",
+            "Limits": "(22%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "28G",
+            "Limits": "28G"
+          },
+          "percent": {
+            "Requests": "(10%)",
+            "Limits": "(10%)"
+          }
+        },
+        "time": "30s"
+      },
+      "6239-41f2177656b54611807cb04571d26d6f-2xhkw": {
+        "cpu": {
+          "raw": {
+            "Requests": "14",
+            "Limits": "14"
+          },
+          "percent": {
+            "Requests": "(22%)",
+            "Limits": "(22%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "28G",
+            "Limits": "28G"
+          },
+          "percent": {
+            "Requests": "(10%)",
+            "Limits": "(10%)"
+          }
+        },
+        "time": "15s"
+      },
+      "6239-4c9659bfd87647fd84e18f7ab4d36274-xxz8t": {
+        "cpu": {
+          "raw": {
+            "Requests": "14",
+            "Limits": "14"
+          },
+          "percent": {
+            "Requests": "(22%)",
+            "Limits": "(22%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "28G",
+            "Limits": "28G"
+          },
+          "percent": {
+            "Requests": "(10%)",
+            "Limits": "(10%)"
+          }
+        },
+        "time": "71s"
+      },
+      "6239-ed64a6f9c56c44c9b23250ceef3abcf5-8tzcb": {
+        "cpu": {
+          "raw": {
+            "Requests": "14",
+            "Limits": "14"
+          },
+          "percent": {
+            "Requests": "(22%)",
+            "Limits": "(22%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "28G",
+            "Limits": "28G"
+          },
+          "percent": {
+            "Requests": "(10%)",
+            "Limits": "(10%)"
+          }
+        },
+        "time": "2m2s"
+      },
+      "continuous-image-puller-wqhbv": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "11m"
+      }
+    }
+  },
+  "aks-sharedunp-20666395-vmss000020": {
+    "cpu": {
+      "raw": {
+        "Requests": "385m",
+        "Limits": "750m"
+      },
+      "percent": {
+        "Requests": "(0%)",
+        "Limits": "(1%)"
+      }
+    },
+    "memory": {
+      "raw": {
+        "Requests": "395Mi",
+        "Limits": "1350Mi"
+      },
+      "percent": {
+        "Requests": "(0%)",
+        "Limits": "(0%)"
+      }
+    },
+    "pods": {
+      "continuous-image-puller-nvmwd": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "11m"
+      }
+    }
+  },
+  "aks-sharedunp-20666395-vmss000021": {
+    "cpu": {
+      "raw": {
+        "Requests": "385m",
+        "Limits": "750m"
+      },
+      "percent": {
+        "Requests": "(0%)",
+        "Limits": "(1%)"
+      }
+    },
+    "memory": {
+      "raw": {
+        "Requests": "395Mi",
+        "Limits": "1350Mi"
+      },
+      "percent": {
+        "Requests": "(0%)",
+        "Limits": "(0%)"
+      }
+    },
+    "pods": {
+      "continuous-image-puller-2nq7l": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "10m"
+      }
+    }
+  },
+  "aks-sharedunp-20666395-vmss000022": {
+    "cpu": {
+      "raw": {
+        "Requests": "14385m",
+        "Limits": "14750m"
+      },
+      "percent": {
+        "Requests": "(22%)",
+        "Limits": "(23%)"
+      }
+    },
+    "memory": {
+      "raw": {
+        "Requests": "28414187520",
+        "Limits": "29415577600"
+      },
+      "percent": {
+        "Requests": "(11%)",
+        "Limits": "(11%)"
+      }
+    },
+    "pods": {
+      "6239-0dd6ad0ab8844bcf9d3d501bc4352a49-mj4j5": {
+        "cpu": {
+          "raw": {
+            "Requests": "14",
+            "Limits": "14"
+          },
+          "percent": {
+            "Requests": "(22%)",
+            "Limits": "(22%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "28G",
+            "Limits": "28G"
+          },
+          "percent": {
+            "Requests": "(10%)",
+            "Limits": "(10%)"
+          }
+        }
+      },
+      "continuous-image-puller-4jm2n": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "10m"
+      }
+    }
+  },
+  "aks-sharedunp-20666395-vmss000023": {
+    "cpu": {
+      "raw": {
+        "Requests": "385m",
+        "Limits": "750m"
+      },
+      "percent": {
+        "Requests": "(0%)",
+        "Limits": "(1%)"
+      }
+    },
+    "memory": {
+      "raw": {
+        "Requests": "395Mi",
+        "Limits": "1350Mi"
+      },
+      "percent": {
+        "Requests": "(0%)",
+        "Limits": "(0%)"
+      }
+    },
+    "pods": {
+      "continuous-image-puller-m72v2": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "8m56s"
+      }
+    }
+  },
+  "aks-sharedunp-20666395-vmss000024": {
+    "cpu": {
+      "raw": {
+        "Requests": "56385m",
+        "Limits": "56750m"
+      },
+      "percent": {
+        "Requests": "(89%)",
+        "Limits": "(89%)"
+      }
+    },
+    "memory": {
+      "raw": {
+        "Requests": "112414187520",
+        "Limits": "113415577600"
+      },
+      "percent": {
+        "Requests": "(43%)",
+        "Limits": "(44%)"
+      }
+    },
+    "pods": {
+      "6239-22161709d45a4c6ba5e103c8a0b7c9b8-6hz24": {
+        "cpu": {
+          "raw": {
+            "Requests": "14",
+            "Limits": "14"
+          },
+          "percent": {
+            "Requests": "(22%)",
+            "Limits": "(22%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "28G",
+            "Limits": "28G"
+          },
+          "percent": {
+            "Requests": "(10%)",
+            "Limits": "(10%)"
+          }
+        },
+        "time": "68s"
+      },
+      "6239-ac8aa788d9fd4cfab3e6ab273c3d2954-9w8lw": {
+        "cpu": {
+          "raw": {
+            "Requests": "14",
+            "Limits": "14"
+          },
+          "percent": {
+            "Requests": "(22%)",
+            "Limits": "(22%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "28G",
+            "Limits": "28G"
+          },
+          "percent": {
+            "Requests": "(10%)",
+            "Limits": "(10%)"
+          }
+        },
+        "time": "22s"
+      },
+      "6239-b2b09d8746164f0185e9fc208563c39d-9rhn8": {
+        "cpu": {
+          "raw": {
+            "Requests": "14",
+            "Limits": "14"
+          },
+          "percent": {
+            "Requests": "(22%)",
+            "Limits": "(22%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "28G",
+            "Limits": "28G"
+          },
+          "percent": {
+            "Requests": "(10%)",
+            "Limits": "(10%)"
+          }
+        },
+        "time": "75s"
+      },
+      "6239-b581b811ec594d0b90eda98b57c78549-rwnx7": {
+        "cpu": {
+          "raw": {
+            "Requests": "14",
+            "Limits": "14"
+          },
+          "percent": {
+            "Requests": "(22%)",
+            "Limits": "(22%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "28G",
+            "Limits": "28G"
+          },
+          "percent": {
+            "Requests": "(10%)",
+            "Limits": "(10%)"
+          }
+        }
+      },
+      "continuous-image-puller-b994t": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "6m57s"
+      }
+    }
+  },
+  "aks-sharedunp-20666395-vmss000025": {
+    "cpu": {
+      "raw": {
+        "Requests": "14385m",
+        "Limits": "14750m"
+      },
+      "percent": {
+        "Requests": "(22%)",
+        "Limits": "(23%)"
+      }
+    },
+    "memory": {
+      "raw": {
+        "Requests": "28414187520",
+        "Limits": "29415577600"
+      },
+      "percent": {
+        "Requests": "(11%)",
+
+        "Limits": "(11%)"
+      }
+    },
+    "pods": {
+      "6239-e7708301a95c4e21bec8c823a1c16156-hbdjt": {
+        "cpu": {
+          "raw": {
+            "Requests": "14",
+            "Limits": "14"
+          },
+          "percent": {
+            "Requests": "(22%)",
+            "Limits": "(22%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "28G",
+            "Limits": "28G"
+          },
+          "percent": {
+            "Requests": "(10%)",
+            "Limits": "(10%)"
+          }
+        }
+      },
+      "continuous-image-puller-h7rdz": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "6m59s"
+      }
+    }
+  },
+  "aks-sharedunp-20666395-vmss000026": {
+    "cpu": {
+      "raw": {
+        "Requests": "14485m",
+        "Limits": "14850m"
+      },
+      "percent": {
+        "Requests": "(22%)",
+        "Limits": "(23%)"
+      }
+    },
+    "memory": {
+      "raw": {
+        "Requests": "27850630Ki",
+        "Limits": "28828550Ki"
+      },
+      "percent": {
+        "Requests": "(11%)",
+        "Limits": "(11%)"
+      }
+    },
+    "pods": {
+      "5803-293338dec7d54603af66eb1017f7a24d-1590415318": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "27s"
+      },
+      "5803-293338dec7d54603af66eb1017f7a24d-t4dfd": {
+        "cpu": {
+          "raw": {
+            "Requests": "100m",
+            "Limits": "100m"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "100Mi",
+            "Limits": "100Mi"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "24s"
+      },
+      "6239-025aa1196f4543509bd6a0988e22bb75-3880355464": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "33s"
+      },
+      "6239-08ca3a33dd864a10a123e9a835fccecb-3599122290": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "41s"
+      },
+      "6239-0dd6ad0ab8844bcf9d3d501bc4352a49-234796422": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "0s"
+      },
+      "6239-108c200f5ecc4f64a075c7670cad4d0f-3166028978": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "3s"
+      },
+      "6239-160e4950736740338b66ac0d9bea182b-1528097841": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        }
+      },
+      "6239-1636d19de61448299ab8f357e61285f5-942289892": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "89s"
+      },
+      "6239-1b6a53f323f34190b8cb1210db6e5e4e-2291733498": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "40s"
+      },
+      "6239-22161709d45a4c6ba5e103c8a0b7c9b8-4169989920": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "71s"
+      },
+      "6239-273bb6466d63465f9f99d7951df55dd1-3312898498": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        }
+      },
+      "6239-27bf161540b6454caa3cf0b234be1d59-3891145597": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "51s"
+      },
+      "6239-41f2177656b54611807cb04571d26d6f-865935456": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "19s"
+      },
+      "6239-4987256fe5b245c7b45b2a974b72c6b3-322936995": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "57s"
+      },
+      "6239-49885f816aac4c689e94f8a0c4151a7d-2063742767": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "9s"
+      },
+      "6239-4c9659bfd87647fd84e18f7ab4d36274-362435058": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "74s"
+      },
+      "6239-558ab12f3b8247cab17c3a0ab2cdbd05-213254882": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "30s"
+      },
+      "6239-6243685c50924a859dcf080b188e4a72-1813168980": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "2m47s"
+      },
+      "6239-662fcbae58764f0aaf0766b8c7953f78-3301318482": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "47s"
+      },
+      "6239-6d96520784db484cbaa033e70d8ca0f0-4142374382": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "55s"
+      },
+      "6239-72388c5138f34465a9c82178227ea629-1307816319": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "54s"
+      },
+      "6239-737cded7b76b4bd5a55fa76534bf90f8-2959429018": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "105s"
+      },
+      "6239-8b9a9d91147a4800bf529b243c8c81f4-2076465678": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        }
+      },
+      "6239-900c06ace09e4203a6ed85bd7409f987-2218197156": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "64s"
+      },
+      "6239-ac8aa788d9fd4cfab3e6ab273c3d2954-477290144": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "25s"
+      },
+      "6239-b2b09d8746164f0185e9fc208563c39d-943459760": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "83s"
+      },
+      "6239-b581b811ec594d0b90eda98b57c78549-764666870": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        }
+      },
+      "6239-b9f61431609349c39d1190f8749e58fb-3127920704": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        }
+      },
+      "6239-dd5374ce08f540f2851dd11e6557c9d0-2011112290": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "83s"
+      },
+      "6239-e2ce93ea446d436886598d3310b4262d-1406712649": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "19s"
+      },
+      "6239-e38de16300b149aa8e6c1a5c46250c71-3999030219": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "58s"
+      },
+      "6239-e4579e7eeb1143a4bcf84947accd74d1-731178194": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        }
+      },
+      "6239-e4579e7eeb1143a4bcf84947accd74d1-bs2ns": {
+        "cpu": {
+          "raw": {
+            "Requests": "14",
+            "Limits": "14"
+          },
+          "percent": {
+            "Requests": "(22%)",
+            "Limits": "(22%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "28G",
+            "Limits": "28G"
+          },
+          "percent": {
+            "Requests": "(10%)",
+            "Limits": "(10%)"
+          }
+        }
+      },
+      "6239-e7708301a95c4e21bec8c823a1c16156-168521572": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        }
+      },
+      "6239-ecde2580c3484f6294c064640f780ee2-3755973404": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "115s"
+      },
+      "6239-ed64a6f9c56c44c9b23250ceef3abcf5-3103849712": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "2m7s"
+      },
+      "6239-eefc0a424d2647d888bf93622c7b8b49-1031311554": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "77s"
+      },
+      "continuous-image-puller-5sm4n": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "6m34s"
+      }
+    }
+  }
+}
+    </script>
+    <script>
+      (function () {
+        var nodeData,
+          requestCpu,
+          limitCpu,
+          requestMemory,
+          limitMemory,
+          tableHtml;
+        for (const node in completeData) {
+          const eachHtml = `<div class="card">
+          <div class="card-header" id=${node}>
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse${node}" aria-expanded="false" aria-controls="collapse${node}">${node}</button>
+            </h2>
+          </div>
+          <div id="collapse${node}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              <div class="row">
+                <h2 class="col-md-12" style="text-align: center;">CPU</h2>
+                <div class="col-md-6">
+                  <div id="pie-cpu-requests-${node}"></div>
+                </div>
+                <div class="col-md-6">
+                  <div id="pie-cpu-limits-${node}"></div>
+                </div>
+              </div>
+
+              <div class="row">
+                <h2 class="col-md-12" style="text-align: center;">Memory</h2>
+                <div class="col-md-6">
+                  <div id="pie-memory-requests-${node}"></div>
+                </div>
+                <div class="col-md-6">
+                  <div id="pie-memory-limits-${node}"></div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <h2 class="col-md-12" style="text-align: center;">Pods</h2>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Pod name</th>
+                      <th scope="col">CPU requests</th>
+                      <th scope="col">CPU limits</th>
+                      <th scope="col">Memory requests</th>
+                      <th scope="col">Memory limits</th>
+                      <th scope="col">Time</th>
+                    </tr>
+                  </thead>
+                  <tbody id="table-body-${node}">
+                  </tbody>
+                </table>
+              </div>
+          </div>`;
+          document.getElementById("accordionExample").innerHTML += eachHtml;
+          var newScript = document.createElement("script");
+          var inlineScript = document.createTextNode(`
+            nodeData = completeData["${node}"];
+            requestCpu = parseInt(nodeData.cpu.percent.Requests.slice(1, -2));
+            limitCpu = parseInt(nodeData.cpu.percent.Limits.slice(1, -2));
+            requestMemory = parseInt(nodeData.memory.percent.Requests.slice(1, -2));
+            limitMemory = parseInt(nodeData.memory.percent.Limits.slice(1, -2));
+            var data = [{
+              values: [requestCpu, 100 - requestCpu],
+              labels: ['In use', 'Free'],
+              text: [],
+              type: 'pie'
+            }];
+            Plotly.newPlot("pie-cpu-requests-${node}", data, {title: "CPU Requests"});
+            data = [{
+              values: [limitCpu, 100 - limitCpu],
+              labels: ['In use', 'Free'],
+              type: 'pie'
+            }];
+            Plotly.newPlot("pie-cpu-limits-${node}", data, {title: "CPU Limits"});
+
+            data = [{
+              values: [requestMemory, 100 - requestMemory],
+              labels: ['In use', 'Free'],
+              type: 'pie'
+            }];
+            Plotly.newPlot("pie-memory-requests-${node}", data, {title: "Memory Requests"});
+            data = [{
+              values: [limitMemory, 100 - limitMemory],
+              labels: ['In use', 'Free'],
+              type: 'pie'
+            }];
+            Plotly.newPlot("pie-memory-limits-${node}", data, {title: "Memory Limits"});
+            tableHtml = '';
+            for (const eachPod in nodeData['pods']) {
+              tableHtml += "<tr><td>" + eachPod + "</td><td>"+nodeData['pods'][eachPod].cpu.raw.Requests+"</td><td>"+nodeData['pods'][eachPod].cpu.raw.Limits+"</td><td>"+nodeData['pods'][eachPod].memory.raw.Requests+"</td><td>"+nodeData['pods'][eachPod].memory.raw.Limits+"</td><td>"+nodeData['pods'][eachPod].time+"</td></tr>"
+            }
+            document.getElementById("table-body-${node}").innerHTML = tableHtml;
+          `);
+          newScript.appendChild(inlineScript);
+          document.body.appendChild(newScript);
+        }
+      })();
+    </script>
+  </body>
+</html>
