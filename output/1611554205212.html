@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <title>Compute instance data</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="accordion" id="accordionExample"></div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script id="data-input">
+ var completeData = {
+  "aks-sharedunp-20666395-vmss0000fb": {
+    "cpu": {
+      "raw": {
+        "Requests": "45875m",
+        "Limits": "46350m"
+      },
+      "percent": {
+        "Requests": "(72%)",
+        "Limits": "(73%)"
+      }
+    },
+    "memory": {
+      "raw": {
+        "Requests": "193855666688",
+        "Limits": "194458597888"
+      },
+      "percent": {
+        "Requests": "(75%)",
+        "Limits": "(75%)"
+      }
+    },
+    "pods": {
+      "5803-2e715f1345144d94af06c5754802d4b4-2627656334": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "16s"
+      },
+      "5803-2e715f1345144d94af06c5754802d4b4-79xld": {
+        "cpu": {
+          "raw": {
+            "Requests": "100m",
+            "Limits": "100m"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "100Mi",
+            "Limits": "100Mi"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "13s"
+      },
+      "6294-a117e0a655174cbf8c6497b5edd984e9-vk72t": {
+        "cpu": {
+          "raw": {
+            "Requests": "12",
+            "Limits": "12"
+          },
+          "percent": {
+            "Requests": "(18%)",
+            "Limits": "(18%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "100G",
+            "Limits": "100G"
+          },
+          "percent": {
+            "Requests": "(38%)",
+            "Limits": "(38%)"
+          }
+        },
+        "time": "75m"
+      },
+      "6462-3e8e93e40d1344b489110594b9145f14-3841780732": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "4h8m"
+      },
+      "6462-3e8e93e40d1344b489110594b9145f14-qghmf": {
+        "cpu": {
+          "raw": {
+            "Requests": "3",
+            "Limits": "3"
+          },
+          "percent": {
+            "Requests": "(4%)",
+            "Limits": "(4%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "13G",
+            "Limits": "13G"
+          },
+          "percent": {
+            "Requests": "(5%)",
+            "Limits": "(5%)"
+          }
+        },
+        "time": "4h7m"
+      },
+      "continuous-image-puller-x67xz": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "13h"
+      },
+      "jupyter-1611545937234112-2d2b52eff169ec4910bebd1cd0defec5dd-2ddac92068-2d5ebe-2d11eb-2da1b8-2d4e0229fca29a": {
+        "cpu": {
+          "raw": {
+            "Requests": "1",
+            "Limits": "1"
+          },
+          "percent": {
+            "Requests": "(1%)",
+            "Limits": "(1%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "2G",
+            "Limits": "2G"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "136m"
+      },
+      "jupyter-1611546113217614-2d4d59fa2c46a948e29ffcb7879c93eadd-2d43ae0f9e-2d5ebf-2d11eb-2da1b8-2d4e0229fca29a": {
+        "cpu": {
+          "raw": {
+            "Requests": "1",
+            "Limits": "1"
+          },
+          "percent": {
+            "Requests": "(1%)",
+            "Limits": "(1%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "2G",
+            "Limits": "2G"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "133m"
+      },
+      "jupyter-1611546842356322-2dc3acb8b352294cca879ee042269d9171-2df647cb9e-2d5ec0-2d11eb-2da1b8-2d4e0229fca29a": {
+        "cpu": {
+          "raw": {
+            "Requests": "1",
+            "Limits": "1"
+          },
+          "percent": {
+            "Requests": "(1%)",
+            "Limits": "(1%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "2G",
+            "Limits": "2G"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "121m"
+      },
+      "jupyter-1611549103875265-2dd1770b2f288c476cb1c472c718ce537e-2d3a403386-2d5ec6-2d11eb-2da1b8-2d4e0229fca29a": {
+        "cpu": {
+          "raw": {
+            "Requests": "16",
+            "Limits": "16"
+          },
+          "percent": {
+            "Requests": "(25%)",
+            "Limits": "(25%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "32G",
+            "Limits": "32G"
+          },
+          "percent": {
+            "Requests": "(12%)",
+            "Limits": "(12%)"
+          }
+        },
+        "time": "84m"
+      },
+      "jupyter-1611553615068809-2d35fa0debd86f43bab12da485ff4f5bdd-2dbb21b6a0-2d5ed0-2d11eb-2da1b8-2d4e0229fca29a": {
+        "cpu": {
+          "raw": {
+            "Requests": "1",
+            "Limits": "1"
+          },
+          "percent": {
+            "Requests": "(1%)",
+            "Limits": "(1%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "2G",
+            "Limits": "2G"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "8m51s"
+      },
+      "shared-buffer-pods-1": {
+        "cpu": {
+          "raw": {
+            "Requests": "2",
+            "Limits": "2"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "7945689497600m",
+            "Limits": "7945689497600m"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "time": "6h26m"
+      },
+      "shared-buffer-pods-11": {
+        "cpu": {
+          "raw": {
+            "Requests": "2",
+            "Limits": "2"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "7945689497600m",
+            "Limits": "7945689497600m"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "time": "13h"
+      },
+      "shared-buffer-pods-5": {
+        "cpu": {
+          "raw": {
+            "Requests": "2",
+            "Limits": "2"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "7945689497600m",
+            "Limits": "7945689497600m"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "time": "6h26m"
+      },
+      "shared-buffer-pods-6": {
+        "cpu": {
+          "raw": {
+            "Requests": "2",
+            "Limits": "2"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "7945689497600m",
+            "Limits": "7945689497600m"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "time": "13h"
+      },
+      "shared-buffer-pods-9": {
+        "cpu": {
+          "raw": {
+            "Requests": "2",
+            "Limits": "2"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "7945689497600m",
+            "Limits": "7945689497600m"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "time": "13h"
+      }
+    }
+  },
+  "aks-sharedunp-20666395-vmss0000fc": {
+    "cpu": {
+      "raw": {
+        "Requests": "62775m",
+        "Limits": "63250m"
+      },
+      "percent": {
+        "Requests": "(99%)",
+        "Limits": "(99%)"
+      }
+    },
+    "memory": {
+      "raw": {
+        "Requests": "142968051097600m",
+        "Limits": "143570982297600m"
+      },
+      "percent": {
+        "Requests": "(55%)",
+        "Limits": "(55%)"
+      }
+    },
+    "pods": {
+      "6462-0848575146ec4d7ebb0c146d9f043773-613878584": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "173m"
+      },
+      "6462-0848575146ec4d7ebb0c146d9f043773-bpxx6": {
+        "cpu": {
+          "raw": {
+            "Requests": "3",
+            "Limits": "3"
+          },
+          "percent": {
+            "Requests": "(4%)",
+            "Limits": "(4%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "13G",
+            "Limits": "13G"
+          },
+          "percent": {
+            "Requests": "(5%)",
+            "Limits": "(5%)"
+          }
+        },
+        "time": "173m"
+      },
+      "6462-7a0f84da8cc042839230842be8feb531-1779807488": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "107m"
+      },
+      "6462-7a0f84da8cc042839230842be8feb531-zz2s2": {
+        "cpu": {
+          "raw": {
+            "Requests": "3",
+            "Limits": "3"
+          },
+          "percent": {
+            "Requests": "(4%)",
+            "Limits": "(4%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "13G",
+            "Limits": "13G"
+          },
+          "percent": {
+            "Requests": "(5%)",
+            "Limits": "(5%)"
+          }
+        },
+        "time": "107m"
+      },
+      "continuous-image-puller-d5whh": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "3h25m"
+      },
+      "jupyter-1611546237953066-2d017fc9e0a993466f81de1eb668e79136-2d8e072dbe-2d5ebf-2d11eb-2da1b8-2d4e0229fca29a": {
+        "cpu": {
+          "raw": {
+            "Requests": "16",
+            "Limits": "16"
+          },
+          "percent": {
+            "Requests": "(25%)",
+            "Limits": "(25%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "32G",
+            "Limits": "32G"
+          },
+          "percent": {
+            "Requests": "(12%)",
+            "Limits": "(12%)"
+          }
+        },
+        "time": "131m"
+      },
+      "jupyter-1611548060180017-2dfee0ad63916846aca25ce11437d97797-2dcc28f222-2d5ec3-2d11eb-2da1b8-2d4e0229fca29a": {
+        "cpu": {
+          "raw": {
+            "Requests": "1",
+            "Limits": "1"
+          },
+          "percent": {
+            "Requests": "(1%)",
+            "Limits": "(1%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "2G",
+            "Limits": "2G"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "101m"
+      },
+      "jupyter-1611548417241963-2d6880cb86e1a94364b52f023ebcc1e3a5-2da0fc45ee-2d5ec4-2d11eb-2da1b8-2d4e0229fca29a": {
+        "cpu": {
+          "raw": {
+            "Requests": "1",
+            "Limits": "1"
+          },
+          "percent": {
+            "Requests": "(1%)",
+            "Limits": "(1%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "2G",
+            "Limits": "2G"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "95m"
+      },
+      "jupyter-1611548914687100-2d6bd540855f014e2fbf4fa5a0af18d98a-2dc97c6296-2d5ec5-2d11eb-2da1b8-2d4e0229fca29a": {
+        "cpu": {
+          "raw": {
+            "Requests": "36",
+            "Limits": "36"
+          },
+          "percent": {
+            "Requests": "(56%)",
+            "Limits": "(56%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "72G",
+            "Limits": "72G"
+          },
+          "percent": {
+            "Requests": "(28%)",
+            "Limits": "(28%)"
+          }
+        },
+        "time": "87m"
+      },
+      "shared-buffer-pods-0": {
+        "cpu": {
+          "raw": {
+            "Requests": "2",
+            "Limits": "2"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "7945689497600m",
+            "Limits": "7945689497600m"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "time": "3h27m"
+      }
+    }
+  },
+  "aks-sharedunp-20666395-vmss0000fd": {
+    "cpu": {
+      "raw": {
+        "Requests": "36775m",
+        "Limits": "37250m"
+      },
+      "percent": {
+        "Requests": "(58%)",
+        "Limits": "(58%)"
+      }
+    },
+    "memory": {
+      "raw": {
+        "Requests": "248696498585600m",
+        "Limits": "249299429785600m"
+      },
+      "percent": {
+        "Requests": "(96%)",
+        "Limits": "(97%)"
+      }
+    },
+    "pods": {
+      "6125-629abdb54a6646caa39ff2df8a5f1dff-1201144322": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "76m"
+      },
+      "6125-629abdb54a6646caa39ff2df8a5f1dff-pv8sl": {
+        "cpu": {
+          "raw": {
+            "Requests": "12",
+            "Limits": "12"
+          },
+          "percent": {
+            "Requests": "(18%)",
+            "Limits": "(18%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "100G",
+            "Limits": "100G"
+          },
+          "percent": {
+            "Requests": "(38%)",
+            "Limits": "(38%)"
+          }
+        },
+        "time": "76m"
+      },
+      "6130-f877817462cc46f1beef6093a4d050e6-1773476190": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "77m"
+      },
+      "6130-f877817462cc46f1beef6093a4d050e6-5h95v": {
+        "cpu": {
+          "raw": {
+            "Requests": "12",
+            "Limits": "12"
+          },
+          "percent": {
+            "Requests": "(18%)",
+            "Limits": "(18%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "100G",
+            "Limits": "100G"
+          },
+          "percent": {
+            "Requests": "(38%)",
+            "Limits": "(38%)"
+          }
+        },
+        "time": "77m"
+      },
+      "6294-a117e0a655174cbf8c6497b5edd984e9-2548763762": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "75m"
+      },
+      "continuous-image-puller-sc2mw": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "82m"
+      },
+      "shared-buffer-pods-10": {
+        "cpu": {
+          "raw": {
+            "Requests": "2",
+            "Limits": "2"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "7945689497600m",
+            "Limits": "7945689497600m"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "time": "84m"
+      },
+      "shared-buffer-pods-12": {
+        "cpu": {
+          "raw": {
+            "Requests": "2",
+            "Limits": "2"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "7945689497600m",
+            "Limits": "7945689497600m"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "time": "75m"
+      },
+      "shared-buffer-pods-2": {
+        "cpu": {
+          "raw": {
+            "Requests": "2",
+            "Limits": "2"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "7945689497600m",
+            "Limits": "7945689497600m"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "time": "75m"
+      },
+      "shared-buffer-pods-3": {
+        "cpu": {
+          "raw": {
+            "Requests": "2",
+            "Limits": "2"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "7945689497600m",
+            "Limits": "7945689497600m"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "time": "75m"
+      },
+      "shared-buffer-pods-4": {
+        "cpu": {
+          "raw": {
+            "Requests": "2",
+            "Limits": "2"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "7945689497600m",
+            "Limits": "7945689497600m"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "time": "75m"
+      },
+      "shared-buffer-pods-7": {
+        "cpu": {
+          "raw": {
+            "Requests": "2",
+            "Limits": "2"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "7945689497600m",
+            "Limits": "7945689497600m"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "time": "75m"
+      }
+    }
+  },
+  "aks-sharedunp-20666395-vmss0000fe": {
+    "cpu": {
+      "raw": {
+        "Requests": "52775m",
+        "Limits": "53250m"
+      },
+      "percent": {
+        "Requests": "(83%)",
+        "Limits": "(84%)"
+      }
+    },
+    "memory": {
+      "raw": {
+        "Requests": "176968051097600m",
+        "Limits": "177570982297600m"
+      },
+      "percent": {
+        "Requests": "(68%)",
+        "Limits": "(69%)"
+      }
+    },
+    "pods": {
+      "continuous-image-puller-ms24r": {
+        "cpu": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "0",
+            "Limits": "0"
+          },
+          "percent": {
+            "Requests": "(0%)",
+            "Limits": "(0%)"
+          }
+        },
+        "time": "61m"
+      },
+      "jupyter-1611551466393724-2dd6809cbf56f542989ec3a4aa8bf6a8cb-2dba6be9a6-2d5ecb-2d11eb-2da1b8-2d4e0229fca29a": {
+        "cpu": {
+          "raw": {
+            "Requests": "2",
+            "Limits": "2"
+          },
+          "percent": {
+            "Requests": "(3%)",
+
+            "Limits": "(3%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "8G",
+            "Limits": "8G"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "time": "44m"
+      },
+      "jupyter-1611551765782434-2daf1405e2de35461695ea54159c226cae-2d6cdf0168-2d5ecc-2d11eb-2da1b8-2d4e0229fca29a": {
+        "cpu": {
+          "raw": {
+            "Requests": "4",
+            "Limits": "4"
+          },
+          "percent": {
+            "Requests": "(6%)",
+            "Limits": "(6%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "16G",
+            "Limits": "16G"
+          },
+          "percent": {
+            "Requests": "(6%)",
+            "Limits": "(6%)"
+          }
+        },
+        "time": "39m"
+      },
+      "jupyter-1611552636925704-2d2ad1b5c34ba448768e0d35489c694e64-2d741cea42-2d5ece-2d11eb-2da1b8-2d4e0229fca29a": {
+        "cpu": {
+          "raw": {
+            "Requests": "4",
+            "Limits": "4"
+          },
+          "percent": {
+            "Requests": "(6%)",
+            "Limits": "(6%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "16G",
+            "Limits": "16G"
+          },
+          "percent": {
+            "Requests": "(6%)",
+            "Limits": "(6%)"
+          }
+        },
+        "time": "25m"
+      },
+      "jupyter-1611552796584342-2d91c7b0d03e7a475795f99c6055312ada-2dd346e3e2-2d5ece-2d11eb-2da1b8-2d4e0229fca29a": {
+        "cpu": {
+          "raw": {
+            "Requests": "4",
+            "Limits": "4"
+          },
+          "percent": {
+            "Requests": "(6%)",
+            "Limits": "(6%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "16G",
+            "Limits": "16G"
+          },
+          "percent": {
+            "Requests": "(6%)",
+            "Limits": "(6%)"
+          }
+        },
+        "time": "22m"
+      },
+      "jupyter-1611552998813486-2d215b59601be347eb96551ab6974bdd8a-2d4bd09baa-2d5ecf-2d11eb-2da1b8-2d4e0229fca29a": {
+        "cpu": {
+          "raw": {
+            "Requests": "4",
+            "Limits": "4"
+          },
+          "percent": {
+            "Requests": "(6%)",
+            "Limits": "(6%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "16G",
+            "Limits": "16G"
+          },
+          "percent": {
+            "Requests": "(6%)",
+            "Limits": "(6%)"
+          }
+        },
+        "time": "19m"
+      },
+      "jupyter-1611553051861287-2d91c7b0d03e7a475795f99c6055312ada-2d6b6f0fe6-2d5ecf-2d11eb-2da1b8-2d4e0229fca29a": {
+        "cpu": {
+          "raw": {
+            "Requests": "4",
+            "Limits": "4"
+          },
+          "percent": {
+            "Requests": "(6%)",
+            "Limits": "(6%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "16G",
+            "Limits": "16G"
+          },
+          "percent": {
+            "Requests": "(6%)",
+            "Limits": "(6%)"
+          }
+        },
+        "time": "18m"
+      },
+      "jupyter-1611553060922422-2d215b59601be347eb96551ab6974bdd8a-2d70d5ada0-2d5ecf-2d11eb-2da1b8-2d4e0229fca29a": {
+        "cpu": {
+          "raw": {
+            "Requests": "4",
+            "Limits": "4"
+          },
+          "percent": {
+            "Requests": "(6%)",
+            "Limits": "(6%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "16G",
+            "Limits": "16G"
+          },
+          "percent": {
+            "Requests": "(6%)",
+            "Limits": "(6%)"
+          }
+        },
+        "time": "18m"
+      },
+      "jupyter-1611553159085966-2d9ae7b2e9719a4448841ab3e57f01566b-2dab583f6a-2d5ecf-2d11eb-2da1b8-2d4e0229fca29a": {
+        "cpu": {
+          "raw": {
+            "Requests": "4",
+            "Limits": "4"
+          },
+          "percent": {
+            "Requests": "(6%)",
+            "Limits": "(6%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "16G",
+            "Limits": "16G"
+          },
+          "percent": {
+            "Requests": "(6%)",
+            "Limits": "(6%)"
+          }
+        },
+        "time": "16m"
+      },
+      "jupyter-1611553426538254-2d06a33d3e328c4a97bd6af89887bf4d05-2d4ac23a42-2d5ed0-2d11eb-2da1b8-2d4e0229fca29a": {
+        "cpu": {
+          "raw": {
+            "Requests": "4",
+            "Limits": "4"
+          },
+          "percent": {
+            "Requests": "(6%)",
+            "Limits": "(6%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "16G",
+            "Limits": "16G"
+          },
+          "percent": {
+            "Requests": "(6%)",
+            "Limits": "(6%)"
+          }
+        },
+        "time": "11m"
+      },
+      "jupyter-1611553513233519-2d3dbba2f2a79542e6b3e836a4cfae7195-2d7e6ee048-2d5ed0-2d11eb-2da1b8-2d4e0229fca29a": {
+        "cpu": {
+          "raw": {
+            "Requests": "16",
+            "Limits": "16"
+          },
+          "percent": {
+            "Requests": "(25%)",
+            "Limits": "(25%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "32G",
+            "Limits": "32G"
+          },
+          "percent": {
+            "Requests": "(12%)",
+            "Limits": "(12%)"
+          }
+        },
+        "time": "10m"
+      },
+      "shared-buffer-pods-8": {
+        "cpu": {
+          "raw": {
+            "Requests": "2",
+            "Limits": "2"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "memory": {
+          "raw": {
+            "Requests": "7945689497600m",
+            "Limits": "7945689497600m"
+          },
+          "percent": {
+            "Requests": "(3%)",
+            "Limits": "(3%)"
+          }
+        },
+        "time": "63m"
+      }
+    }
+  }
+}
+    </script>
+    <script>
+      (function () {
+        var nodeData,
+          requestCpu,
+          limitCpu,
+          requestMemory,
+          limitMemory,
+          tableHtml;
+        for (const node in completeData) {
+          const eachHtml = `<div class="card">
+          <div class="card-header" id=${node}>
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse${node}" aria-expanded="false" aria-controls="collapse${node}">${node}</button>
+            </h2>
+          </div>
+          <div id="collapse${node}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              <div class="row">
+                <h2 class="col-md-12" style="text-align: center;">CPU</h2>
+                <div class="col-md-6">
+                  <div id="pie-cpu-requests-${node}"></div>
+                </div>
+                <div class="col-md-6">
+                  <div id="pie-cpu-limits-${node}"></div>
+                </div>
+              </div>
+
+              <div class="row">
+                <h2 class="col-md-12" style="text-align: center;">Memory</h2>
+                <div class="col-md-6">
+                  <div id="pie-memory-requests-${node}"></div>
+                </div>
+                <div class="col-md-6">
+                  <div id="pie-memory-limits-${node}"></div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <h2 class="col-md-12" style="text-align: center;">Pods</h2>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Pod name</th>
+                      <th scope="col">CPU requests</th>
+                      <th scope="col">CPU limits</th>
+                      <th scope="col">Memory requests</th>
+                      <th scope="col">Memory limits</th>
+                      <th scope="col">Time</th>
+                    </tr>
+                  </thead>
+                  <tbody id="table-body-${node}">
+                  </tbody>
+                </table>
+              </div>
+          </div>`;
+          document.getElementById("accordionExample").innerHTML += eachHtml;
+          var newScript = document.createElement("script");
+          var inlineScript = document.createTextNode(`
+            nodeData = completeData["${node}"];
+            requestCpu = parseInt(nodeData.cpu.percent.Requests.slice(1, -2));
+            limitCpu = parseInt(nodeData.cpu.percent.Limits.slice(1, -2));
+            requestMemory = parseInt(nodeData.memory.percent.Requests.slice(1, -2));
+            limitMemory = parseInt(nodeData.memory.percent.Limits.slice(1, -2));
+            var data = [{
+              values: [requestCpu, 100 - requestCpu],
+              labels: ['In use', 'Free'],
+              text: [],
+              type: 'pie'
+            }];
+            Plotly.newPlot("pie-cpu-requests-${node}", data, {title: "CPU Requests"});
+            data = [{
+              values: [limitCpu, 100 - limitCpu],
+              labels: ['In use', 'Free'],
+              type: 'pie'
+            }];
+            Plotly.newPlot("pie-cpu-limits-${node}", data, {title: "CPU Limits"});
+
+            data = [{
+              values: [requestMemory, 100 - requestMemory],
+              labels: ['In use', 'Free'],
+              type: 'pie'
+            }];
+            Plotly.newPlot("pie-memory-requests-${node}", data, {title: "Memory Requests"});
+            data = [{
+              values: [limitMemory, 100 - limitMemory],
+              labels: ['In use', 'Free'],
+              type: 'pie'
+            }];
+            Plotly.newPlot("pie-memory-limits-${node}", data, {title: "Memory Limits"});
+            tableHtml = '';
+            for (const eachPod in nodeData['pods']) {
+              tableHtml += "<tr><td>" + eachPod + "</td><td>"+nodeData['pods'][eachPod].cpu.raw.Requests+"</td><td>"+nodeData['pods'][eachPod].cpu.raw.Limits+"</td><td>"+nodeData['pods'][eachPod].memory.raw.Requests+"</td><td>"+nodeData['pods'][eachPod].memory.raw.Limits+"</td><td>"+nodeData['pods'][eachPod].time+"</td></tr>"
+            }
+            document.getElementById("table-body-${node}").innerHTML = tableHtml;
+          `);
+          newScript.appendChild(inlineScript);
+          document.body.appendChild(newScript);
+        }
+      })();
+    </script>
+  </body>
+</html>
